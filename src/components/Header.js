@@ -5,7 +5,7 @@ export default function header() {
     <header>
         <div>
             <span className='logo'>Clothes Club</span>
-            <ul className="nav">
+            <ul className='nav'>
               <li>О нас</li>
               <li>Контакты</li>
               <li>Личный кабинет</li>
