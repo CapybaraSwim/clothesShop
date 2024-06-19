@@ -16,6 +16,7 @@ body{
     margin: 50px auto;
 }
 header{
+    position: relative;
     .logo{
         font-weight: 600;
         font-size: 40px;
@@ -29,11 +30,11 @@ header{
         background-size: cover;
         background-position: center center;
         background-blend-mode: multiply;
+        background-color: #6d6d6d;
         position: relative;
         &::after{
             content: "Лучшая одежда для вас";
             position: absolute;
-            background-color: rgba(0, 0, 0, 0.3);
             padding-left: 50px;
             top: 100px;
             left: 0px;
@@ -45,7 +46,6 @@ header{
         &::before{
             content: 'По низким ценам';
             position: absolute;
-            background-color: rgba(0, 0, 0, 0.3);
             padding-left: 50px;
             top: 300px;
             left: 0px;
@@ -71,6 +71,32 @@ header{
             }
         }
     }
+    .shop-cart-button{
+        float: right;
+        cursor: pointer;
+        transition: color, transform 500ms ease;
+        padding-top: 20px;
+        height: 25px;
+        width: 25px;
+        &:hover, &.active{
+            color:#ec4545;
+        }
+        &.active{
+            transform: scale(1.3);
+        }
+    }
+    .shop-cart{
+        position: absolute;
+        top: 75px;
+        right: 0;
+        width: 450px;
+        min-height: 100px;
+        background: #eeeded;
+        -webkit-box-shadow: 16px 4px 12px 8px rgba(34, 60, 80, 0.13);
+        -moz-box-shadow: 16px 4px 12px 8px rgba(34, 60, 80, 0.13);
+        box-shadow: 16px 4px 12px 8px rgba(34, 60, 80, 0.13);
+        z-index: 9;
+    }
 }
 main{
     display: flex;
@@ -80,13 +106,45 @@ main{
     .item{
         width: 30%;
         margin-bottom: 50px;
+        overflow: hidden;
+        position: relative;
+        padding-bottom: 20px;
+        border-radius: 10px 10px 0px 0px;
+        transition: background 500ms ease;
+        &:hover{
+            background: #dddddd;
+        }
         img{
             width: 100%;
+            transition: transform 500ms ease;
             border-radius: 10px 10px 0px 0px;
             height: 500px;
             &:hover{
-                transform: scale(1.05);
+                transform: scale(1.03);
             }
+        }
+    }
+    h3, p, b{
+        margin: 10px 20px;
+        color: #333;
+    }
+    .add-to-cart{
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        background: #e35e00;
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 35px;
+        color:#fff;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 20px;
+        transition: transform 500ms ease;
+        &:hover{
+            transform: scale(1.5) translateY(-5px);
         }
     }
 }
