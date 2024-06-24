@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/clothesShop/static/css/main.a8e3a3bb.css",
+    "main.js": "/clothesShop/static/js/main.90fd17b7.js",
+    "static/media/shopClub.jpg": "/clothesShop/static/media/shopClub.9473ad20cc8236755168.jpg",
+    "index.html": "/clothesShop/index.html",
+    "main.a8e3a3bb.css.map": "/clothesShop/static/css/main.a8e3a3bb.css.map",
+    "main.90fd17b7.js.map": "/clothesShop/static/js/main.90fd17b7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a8e3a3bb.css",
+    "static/js/main.90fd17b7.js"
+  ]
+}

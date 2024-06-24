@@ -90,12 +90,35 @@ header{
         top: 75px;
         right: 0;
         width: 450px;
-        min-height: 100px;
+        padding: 20px;
         background: #eeeded;
         -webkit-box-shadow: 16px 4px 12px 8px rgba(34, 60, 80, 0.13);
         -moz-box-shadow: 16px 4px 12px 8px rgba(34, 60, 80, 0.13);
         box-shadow: 16px 4px 12px 8px rgba(34, 60, 80, 0.13);
         z-index: 9;
+        .item_cart{
+            width: 100%;
+            float: left;
+            margin-bottom: 20px;
+            img{
+                width: 70px;
+                float: left;
+                margin-right: 20px;
+            }
+            h3{
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+            p{
+                font-weight: 300;
+            }
+        }
+        .empty{
+            h2{
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+        }
     }
 }
 main{
