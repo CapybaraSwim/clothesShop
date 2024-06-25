@@ -24,7 +24,7 @@ header{
     }
     .presentation{
         margin: 50px auto;
-        background: url('./img/shopClub.jpg') no-repeat;
+        background: url('./images/shopClub.jpg') no-repeat;
         width: 100%;
         height: 500px;
         background-size: cover;
@@ -112,6 +112,25 @@ header{
             p{
                 font-weight: 300;
             }
+            .item_delete{
+                color: #ec4545;
+                float: right;
+                position: relative;
+                width: 30px;
+                height: 30px;
+                top: -25px;
+                cursor: pointer;
+                transition: color, transform 500ms ease;
+                &:hover{
+                    color: #ac2424;
+                }
+            }
+        }
+        .sum{
+            float: left;
+            width: 100%;
+            font-size: 20px;
+            font-weight: 600;
         }
         .empty{
             h2{

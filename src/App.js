@@ -8,7 +8,6 @@ function App() {
   const [items, setItems] = useState([]);
   
   useEffect(() => {
-    // Устанавливаем товары из импортированного JSON файла
     setItems(products.items);
   }, []);
 
@@ -26,9 +25,13 @@ function App() {
     }
   };
 
+  const deleteOrder = (id) =>{
+    setOrders(orders.filter(el => el.id !== id))
+  }
+
   return (
     <div className="wrapper">
-      <Header orders={orders} />
+      <Header orders={orders} onDelete={deleteOrder}/>
       <div className="bestsellers">
         <h2 className="bestsellers_title">Бестселлеры</h2>
         <Items items={items} onAdd={addToOrder} />

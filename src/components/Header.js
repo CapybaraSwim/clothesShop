@@ -4,11 +4,13 @@ import Orders from "./Orders";
 
 
 const showOrders = (props) =>{
+  let sum = props.orders.reduce((sum, current) => sum + Number(current.price), 0);
   return(
     <div>
       {props.orders.map(el => (
-        <Orders key={el.id} item={el}></Orders>
+        <Orders onDelete={props.onDelete} key={el.id} item={el}></Orders>
       ))}
+      <p className="sum">Сумма: {new Intl.NumberFormat().format(sum)}&#x20bd;</p>
     </div>
   )
 }
