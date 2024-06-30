@@ -24,7 +24,7 @@ header{
     }
     .presentation{
         margin: 50px auto;
-        background: url('./images/shopClub.jpg') no-repeat;
+        background: url('../public/img/shopClub.jpg') no-repeat;
         width: 100%;
         height: 500px;
         background-size: cover;
@@ -155,15 +155,16 @@ main{
         transition: background 500ms ease;
         &:hover{
             background: #dddddd;
+            img{
+                transform: scale(1.01);
+            }
         }
         img{
             width: 100%;
             transition: transform 500ms ease;
             border-radius: 10px 10px 0px 0px;
             height: 500px;
-            &:hover{
-                transform: scale(1.03);
-            }
+            cursor: pointer;
         }
     }
     h3, p, b{
@@ -186,7 +187,7 @@ main{
         font-size: 20px;
         transition: transform 500ms ease;
         &:hover{
-            transform: scale(1.5) translateY(-5px);
+            transform: scale(1.3);
         }
     }
 }

@@ -20,10 +20,10 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "start": "concurrently \"npm run client\" \"npm run server\"",
+    "start": "webpack serve --open --config webpack.config.js",
     "client": "react-scripts start",
     "server": "node server.js",
-    "build": "react-scripts build",
+    "build": "webpack --config webpack.prod.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -46,7 +46,11 @@
     ]
   },
   "devDependencies": {
+    "concurrently": "^7.6.0",
     "copy-webpack-plugin": "^12.0.2",
-    "concurrently": "^7.6.0"
+    "file-loader": "^6.2.0",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.92.1",
+    "webpack-cli": "^5.1.4"
   }
 }

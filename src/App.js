@@ -27,7 +27,7 @@ function App() {
 
   const deleteOrder = (id) =>{
     setOrders(orders.filter(el => el.id !== id))
-  }
+  };
 
   return (
     <div className="wrapper">
