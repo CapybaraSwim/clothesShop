@@ -1,19 +1,14 @@
 {
   "files": {
-    "main.css": "/clothesShop/static/css/main.8b4bfb62.css",
-    "main.js": "/clothesShop/static/js/main.0eb34a52.js",
-    "static/media/male_chinos.jpg": "/clothesShop/static/media/male_chinos.2bd834614b2614a72c03.jpg",
-    "static/media/shorts_male1.jpg": "/clothesShop/static/media/shorts_male1.6716b8e0e8b5224c876f.jpg",
-    "static/media/male_t-shirt.jpg": "/clothesShop/static/media/male_t-shirt.69122687b6d281500a89.jpg",
+    "main.css": "/clothesShop/static/css/main.405c822d.css",
+    "main.js": "/clothesShop/static/js/main.05dbac2b.js",
     "static/media/shopClub.jpg": "/clothesShop/static/media/shopClub.9473ad20cc8236755168.jpg",
-    "static/media/female_t-shirt.webp": "/clothesShop/static/media/female_t-shirt.65372f718e8d272de910.webp",
-    "static/media/female_jeans.webp": "/clothesShop/static/media/female_jeans.6c7ff88d14dcec0f2697.webp",
     "index.html": "/clothesShop/index.html",
-    "main.8b4bfb62.css.map": "/clothesShop/static/css/main.8b4bfb62.css.map",
-    "main.0eb34a52.js.map": "/clothesShop/static/js/main.0eb34a52.js.map"
+    "main.405c822d.css.map": "/clothesShop/static/css/main.405c822d.css.map",
+    "main.05dbac2b.js.map": "/clothesShop/static/js/main.05dbac2b.js.map"
   },
   "entrypoints": [
-    "static/css/main.8b4bfb62.css",
-    "static/js/main.0eb34a52.js"
+    "static/css/main.405c822d.css",
+    "static/js/main.05dbac2b.js"
   ]
 }
