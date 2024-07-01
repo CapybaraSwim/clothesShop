@@ -1,7 +1,7 @@
-import React, {useState} from "react"
+import React, {useState} from "react";
 import { FaBasketShopping } from "react-icons/fa6";
 import Orders from "./Orders";
-
+import Slider from "./Slider";
 
 const showOrders = (props) =>{
   let sum = props.orders.reduce((sum, current) => sum + Number(current.price), 0);
@@ -26,14 +26,16 @@ export default function Header(props) {
   return (
     <header>
         <div>
+          <div className="header_nav">
             <span className="logo">Clothes Club</span>
             <ul className="nav">
+              <FaBasketShopping onClick={()=> setCartOpen(cartOpen = !cartOpen)} className={`shop-cart-button ${cartOpen && "active"}`}/>
               <li>О нас</li>
               <li>Контакты</li>
               <li>Личный кабинет</li>
             </ul>
-            <FaBasketShopping onClick={()=> setCartOpen(cartOpen = !cartOpen)} className={`shop-cart-button ${cartOpen && "active"}`}/>
-
+          </div>
+            <Slider />
             {cartOpen && (
               <div className="shop-cart">
                 {props.orders.length > 0 ?
@@ -41,7 +43,6 @@ export default function Header(props) {
               </div>
             )}        
         </div>
-        <div className="presentation"></div>
     </header>
   )
 }

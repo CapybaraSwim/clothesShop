@@ -32,9 +32,11 @@ function App() {
   return (
     <div className="wrapper">
       <Header orders={orders} onDelete={deleteOrder}/>
-      <div className="bestsellers">
-        <h2 className="bestsellers_title">Бестселлеры</h2>
-        <Items items={items} onAdd={addToOrder} />
+      <div className="container">
+        <div className="bestsellers">
+          <h2 className="bestsellers_title">Бестселлеры</h2>
+          <Items items={items} onAdd={addToOrder} />
+        </div>
       </div>
       <Footer />
     </div>

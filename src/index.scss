@@ -10,54 +10,35 @@ body{
     color: #000;
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
+    overflow-x: hidden;
 }
-.wrapper{
-    width: 1280px;
+.container{
+    max-width: 1280px;
     margin: 50px auto;
 }
 header{
+    max-width: 100%;
     position: relative;
+    .header_nav{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        z-index: 9;
+        color: #fff;
+    }
     .logo{
         font-weight: 600;
         font-size: 40px;
         cursor: pointer;
     }
-    .presentation{
-        margin: 50px auto;
-        background: url('../public/img/shopClub.jpg') no-repeat;
-        width: 100%;
-        height: 500px;
-        background-size: cover;
-        background-position: center center;
-        background-blend-mode: multiply;
-        background-color: #6d6d6d;
-        position: relative;
-        &::after{
-            content: "Лучшая одежда для вас";
-            position: absolute;
-            padding-left: 50px;
-            top: 100px;
-            left: 0px;
-            width: 300px;
-            font-size: 40px;
-            font-weight: 600;
-            color: #fff;
-        }
-        &::before{
-            content: 'По низким ценам';
-            position: absolute;
-            padding-left: 50px;
-            top: 300px;
-            left: 0px;
-            width: 300px;
-            font-size: 20px;
-            font-weight: 300;
-            color: #fff;
-        }
-    }
     ul{
         &.nav{
-            margin: 20px auto;
+            margin-right: 60px;
             float:right;
             list-style: none;
             li{
@@ -72,10 +53,9 @@ header{
         }
     }
     .shop-cart-button{
-        float: right;
+        float: left;
         cursor: pointer;
         transition: color, transform 500ms ease;
-        padding-top: 20px;
         height: 25px;
         width: 25px;
         &:hover, &.active{
@@ -191,12 +171,100 @@ main{
         }
     }
 }
-footer{
-    text-align: center;
-    padding-top: 10px;
-}
+.slider {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 750px;
+  
+    & .slide-list {
+      display: flex;
+      height: 100%;
+      transition: transform 0.5s ease-in-out;
+      width: 100%;
+  
+      & .slide {
+        flex: 1 0 100%;
+        position: relative;
+        & .slide-image {
+          display: flex;
+          margin: 0 auto;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          background-size: cover;
+          background-position: center center;
+        }
+        &::after {
+        }
+      }
+    }
+  }
+  
+  .arrows {
+    position: absolute;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    height: 100%;
+    top: 30%;
+    width: 100%;
+    z-index: 1;
+  
+    & .arrow {
+      height: 30px;
+      width: 30px;
+  
+      &:hover {
+        cursor: pointer;
+      }
+  
+      &.left {
+        background-image: url(../public/img/icons/arrow.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-left: 5px;
+        transform: rotate(180deg);
+      }
+  
+      &.right {
+        background-image: url(../public/img/icons/arrow.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-right: 5px;
+      }
+    }
+  }
+  
+  .dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+  
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #fff;
+      margin: 0 5px;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+  
+      &.selected {
+        opacity: 0.7;
+      }
+    }
+  }
 
 .bestsellers_title{
     text-align: center;
     margin: 30px 0px;
+}
+footer{
+    text-align: center;
+    padding-top: 10px;
 }
